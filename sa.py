@@ -147,7 +147,7 @@ if os.path.isfile("./result/result_sa.csv"): # "result.csv" ファイルが存�
 else: # "result_sa.csv" 
     with open("./result/result_sa.csv", 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow(['Gset','T_ini','T_min','cycle','trial','best-known value','min_cut_value', 'mean_cut_value', 'max_cut_value', 'mean_time'])
+        writer.writerow(['Gset','T_ini','T_min','cycle','trial','best-known value','mean_cut_value', 'max_cut_value', 'min_cut_value', 'mean_time'])
         writer.writerow([file_name,T_ini,T_min,cycle,trial,best_known,np.mean(cut_value_list), np.min(cut_value_list), np.max(cut_value_list), np.mean(time_list)])
 
 with open('./result/cut_value_sa.csv', 'a', newline='') as f:
