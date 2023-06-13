@@ -16,7 +16,7 @@ SSA-for-MAX-CUT is an implementation of the Simulated Simultaneous Annealing alg
 
 ## Background
 
-The MAX-CUT problem is a well-known problem in combinatorial optimization. This repository contains an implementation of the Stochastic Simulated Annealing (SSA) algorithm to tackle the MAX-CUT problem as described in the research paper ["Fast-Converging Simulated Annealing for Ising Models Based on Integral Stochastic Computing"](https://ieeexplore.ieee.org/document/9743572).　In addition, it contains SSA with individual noise (SSAI) with the hyperparameter determintion in the research paper ["Local Energy Distribution Based Hyperparameter Determination for Stochastic Simulated Annealing"](https://arxiv.org/abs/2304.11839).
+The MAX-CUT problem is a well-known problem in combinatorial optimization. This repository contains an implementation of the Stochastic Simulated Annealing (SSA) algorithm to tackle the MAX-CUT problem as described in the research paper ["Fast-Converging Simulated Annealing for Ising Models Based on Integral Stochastic Computing"](https://ieeexplore.ieee.org/document/9743572).　In addition, it contains the SSA with individual noise (SSAI) algorithm with the hyperparameter determintion in the research paper ["Local Energy Distribution Based Hyperparameter Determination for Stochastic Simulated Annealing"](https://arxiv.org/abs/2304.11839).
 
 ## Installation
 
@@ -44,6 +44,8 @@ To run the SSA algorithm on a single instance, use the sa.py script. For example
 ```sh
 python3 ssa.py --file-path graph/G1.txt --cylce 1000 --trial 100 --tau 1 --param 1
 ```
+Here ia the options.
+
 --file-path: a graph file
 
 --cycle: Number of cycles for 1 trial
@@ -54,19 +56,21 @@ python3 ssa.py --file-path graph/G1.txt --cylce 1000 --trial 100 --tau 1 --param
 
 --param: There are eight parameters written in ssa.py
 
+You can find the simulation results in ./result.
+
 #### SSAI
 
 Here is a python program for SSAI that can run, like SSA.
 - ssai.py
 
-It has the same option as well as SSA.
+It has the same options as well as SSA.
 
 #### SA
 
 Also, here is a python program for traditional SA.
 - sa.py
 
-Here is the option.
+Here is the options.
 
 --file-path: a graph file
 
@@ -77,7 +81,6 @@ Here is the option.
 --T_ini  Initial temperature
 
 --T_min: Minimum temperature (last temperature)
-
 
 ### Batch Processing
 
@@ -134,7 +137,7 @@ Here is a bibtex for the code.
 @misc{nonizawa_SSAforMAXCUT,
     author = {Naoya Onizawa,
     title = {SSA-for-MAX-CUT},
-    year = {Year},
+    year = {2023},
     publisher = {GitHub},
     journal = {GitHub Repository},
     howpublished = {\url{https://github.com/nonizawa/SSA-for-MAX-CUT}}
