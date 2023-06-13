@@ -4,19 +4,17 @@
 
 Under construction...
 
-SSA-for-MAX-CUT is an implementation of the Simulated Simultaneous Annealing algorithm for solving the MAX-CUT problem. This repository contains code that can be used to experiment with this optimization algorithm based on the research in the papers ["Fast-Converging Simulated Annealing for Ising Models Based on Integral Stochastic Computing"](https://ieeexplore.ieee.org/document/9743572) ["Local Energy Distribution Based Hyperparameter Determination for Stochastic Simulated Annealing"](https://arxiv.org/abs/2304.11839) by [N. Onizawa, et al.,].
+SSA-for-MAX-CUT is an implementation of the Simulated Simultaneous Annealing algorithm for solving the MAX-CUT problem. The MAX-CUT problem is a well-known problem in combinatorial optimization. This repository contains an implementation of the Stochastic Simulated Annealing (SSA) algorithm to tackle the MAX-CUT problem as described in the research paper ["Fast-Converging Simulated Annealing for Ising Models Based on Integral Stochastic Computing"](https://ieeexplore.ieee.org/document/9743572).　In addition, it contains an extented algorithm SSAI (SSA with individual noise) with the hyperparameter determintion in the research paper ["Local Energy Distribution Based Hyperparameter Determination for Stochastic Simulated Annealing"](https://arxiv.org/abs/2304.11839).
+
 
 ## Table of Contents
-1. [Background](#background)
-2. [Installation](#installation)
-3. [Single run](#single)
-4. [Batch processing](#batch)
-5. [License](#license)
-6. [Citation](#citation)
+1. [Installation](#installation)
+2. [Single run](#single)
+3. [Batch processing](#batch)
+4. [License](#license)
+5. [Citation](#citation)
 
-## Background
 
-The MAX-CUT problem is a well-known problem in combinatorial optimization. This repository contains an implementation of the Stochastic Simulated Annealing (SSA) algorithm to tackle the MAX-CUT problem as described in the research paper ["Fast-Converging Simulated Annealing for Ising Models Based on Integral Stochastic Computing"](https://ieeexplore.ieee.org/document/9743572).　In addition, it contains the SSA with individual noise (SSAI) algorithm with the hyperparameter determintion in the research paper ["Local Energy Distribution Based Hyperparameter Determination for Stochastic Simulated Annealing"](https://arxiv.org/abs/2304.11839).
 
 ## Installation
 
