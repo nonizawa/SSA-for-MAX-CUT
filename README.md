@@ -36,6 +36,9 @@ cd SSA-for-MAX-CUT
 ## Usage
 
 ### Single Run
+
+#### SSSA
+
 To run the SSA algorithm on a single instance, use the sa.py script. For example:
 
 ```sh
