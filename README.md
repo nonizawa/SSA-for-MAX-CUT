@@ -57,16 +57,16 @@ python3 ssa.py --file-path graph/G1.txt --cylce 1000 --trial 100 --tau 1 --param
 #### SSAI
 
 Here is a python program for SSAI that can run, like SSA.
-- ssai.py [options]
+- ssai.py
 
 It has the same option as well as SSA.
 
 #### SA
 
 Also, here is a python program for traditional SA.
-- sa.py [options]
+- sa.py
 
-Here is the options.
+Here is the option.
 
 --file-path: a graph file
 
