@@ -1,4 +1,4 @@
-# SSA-for-MAX-CUT
+# SSA-for-MAX-CUT (Stochastic simulated annealing for maximum cut problems)
 
 [![GitHub license](https://img.shields.io/github/license/nonizawa/SSA-for-MAX-CUT)](https://github.com/nonizawa/SSA-for-MAX-CUT/blob/main/LICENSE)
 
