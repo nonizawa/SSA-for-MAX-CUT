@@ -31,7 +31,7 @@ cd SSA-for-MAX-CUT
 
 ## Single Run
 
-### SSA
+### SSA (Stochastic simulated annealing)
 
 To run the SSA algorithm on a single instance, use the sa.py script. For example:
 
@@ -53,7 +53,7 @@ Here ia the options.
 --param: There are eight parameters written in ssa.py
 
 
-### SSAI
+### SSAI (Stochastic simulated annealing with individual noise)
 
 Here is a python program for SSAI that can run, like SSA.
 - ssai.py
@@ -61,7 +61,7 @@ Here is a python program for SSAI that can run, like SSA.
 It has the same options as well as SSA.
 
 
-### SA
+### SA (Traditional simulated annealing)
 
 Also, here is a python program for traditional SA.
 - sa.py
