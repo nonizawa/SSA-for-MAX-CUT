@@ -187,7 +187,7 @@ if os.path.isfile(csv_file_name1):
 else:
     with open(csv_file_name1, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow(['Gset', 'edge value', 'edge type', 'best-known value', 'mean_cut_value', 'man_cut_value', 'min_cut_value', 'I0_min', 'I0_max', 'ratio of mean/best', 'ratio of max/best', 'mean_time'])
+        writer.writerow(['Gset', 'number of edges', 'edge value', 'edge type', 'best-known value', 'mean_cut_value', 'man_cut_value', 'min_cut_value', 'I0_min', 'I0_max', 'ratio of mean/best', 'ratio of max/best', 'mean_time'])
         writer.writerow(data)
 
 # Write cut list to csv
