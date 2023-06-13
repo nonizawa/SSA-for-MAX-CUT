@@ -128,3 +128,15 @@ Here is the following paper describing hyperparameters for SSQA:
       primaryClass={cs.LG}
 }
 ```
+
+Here is a bibtex for the code.
+```bibtex
+@misc{nonizawa_SSAforMAXCUT,
+    author = {Naoya Onizawa,
+    title = {SSA-for-MAX-CUT},
+    year = {Year},
+    publisher = {GitHub},
+    journal = {GitHub Repository},
+    howpublished = {\url{https://github.com/nonizawa/SSA-for-MAX-CUT}}
+}
+```
