@@ -42,23 +42,35 @@ To run the SSA algorithm on a single instance, use the sa.py script. For example
 python3 ssa.py --file-path graph/G1.txt --cylce 1000 --trial 100 --tau 1 --param 1
 ```
 --file-path: a graph file
+
 --cycle: Number of cycles for 1 trial
+
 --trial: Number of trials to evaluate the performance on average
+
 --tau:  A pseudo inverse temperature is increased every tau cycle
+
 --param: There are eight parameters written in ssa.py
 
 Here is a python program for SSAI that can run, like SSA.
 - ssai.py [options]
+
 It has the same option as well as SSA.
 
 Also, here is a python program for traditional SA.
 - sa.py [options]
+
 Here is the options.
+
 --file-path: a graph file
+
 --cycle: Number of cycles for 1 trial
+
 --trial: Number of trials to evaluate the performance on average
+
 --T_ini  Initial temperature
+
 --T_min: Minimum temperature (last temperature)
+
 
 ### Batch Processing
 To run the SSA algorithm on multiple graphs in a batch, use the batch_sa.sh script. For example:
