@@ -37,7 +37,7 @@ cd SSA-for-MAX-CUT
 
 ### Single Run
 
-#### SSSA
+#### SSA
 
 To run the SSA algorithm on a single instance, use the sa.py script. For example:
 
@@ -54,10 +54,14 @@ python3 ssa.py --file-path graph/G1.txt --cylce 1000 --trial 100 --tau 1 --param
 
 --param: There are eight parameters written in ssa.py
 
+#### SSAI
+
 Here is a python program for SSAI that can run, like SSA.
 - ssai.py [options]
 
 It has the same option as well as SSA.
+
+#### SA
 
 Also, here is a python program for traditional SA.
 - sa.py [options]
@@ -76,13 +80,22 @@ Here is the options.
 
 
 ### Batch Processing
+
+#### SSA
+
 To run the SSA algorithm on multiple graphs in a batch, use the batch_sa.sh script. For example:
 
 ```sh
 ./batch_ssa.sh
 ```
+
+#### SSAI
+
 Here is a python program for SSAI.
 - batch_ssai.sh
+
+#### SA
+
 Also, here is a python program for traditional SA.
 - batch_sa.sh
 
