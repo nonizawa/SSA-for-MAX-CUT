@@ -120,7 +120,7 @@ If you use this code in your research, please cite the original paper:
   pages={1-7},
   doi={10.1109/TNNLS.2022.3159713}}
 ```
-Here is the following paper describing hyperparameters for SSQA:
+Here is the following paper describing hyperparameters for SSA and SSAI:
 ```bibtex
 @misc{onizawa2023local,
       title={Local Energy Distribution Based Hyperparameter Determination for Stochastic Simulated Annealing}, 
