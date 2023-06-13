@@ -13,7 +13,6 @@ SSA-for-MAX-CUT is an implementation of the Simulated Simultaneous Annealing alg
 5. [Citation](#citation)
 
 
-
 ## Installation
 
 ### Prerequisites
@@ -38,7 +37,7 @@ To run the SSA algorithm on a single instance, use the sa.py script. For example
 ```sh
 python ssa.py --file_path graph/G1.txt --cylce 1000 --trial 100 --tau 1 --param 1
 ```
-You can find the simulation results in ./result/.
+You can find the simulation results in ./result/.　Result***.csv includes simulation retsuls, such as mean cut values and simulation time. Cut***.csv includes cut values for all trials.
 
 Here ia the options.
 
