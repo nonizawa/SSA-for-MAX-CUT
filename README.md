@@ -9,10 +9,10 @@ SSA-for-MAX-CUT is an implementation of the Simulated Simultaneous Annealing alg
 ## Table of Contents
 1. [Background](#background)
 2. [Installation](#installation)
-3. [Usage](#usage)
-4. [License](#license)
-5. [Citation](#citation)
-6. [Contributing](#contributing)
+3. [Single run](#single)
+4. [Batch processing](#batch)
+5. [License](#license)
+6. [Citation](#citation)
 
 ## Background
 
@@ -33,17 +33,17 @@ git clone https://github.com/nonizawa/SSA-for-MAX-CUT.git
 cd SSA-for-MAX-CUT
 ```
 
-## Usage
+## Single Run
 
-### Single Run
-
-#### SSA
+### SSA
 
 To run the SSA algorithm on a single instance, use the sa.py script. For example:
 
 ```sh
 python ssa.py --file_path graph/G1.txt --cylce 1000 --trial 100 --tau 1 --param 1
 ```
+You can find the simulation results in ./result/.
+
 Here ia the options.
 
 --file_path: a graph file
@@ -56,10 +56,8 @@ Here ia the options.
 
 --param: There are eight parameters written in ssa.py
 
-You can find the simulation results in ./result/.
 
-
-#### SSAI
+### SSAI
 
 Here is a python program for SSAI that can run, like SSA.
 - ssai.py
@@ -67,7 +65,7 @@ Here is a python program for SSAI that can run, like SSA.
 It has the same options as well as SSA.
 
 
-#### SA
+### SA
 
 Also, here is a python program for traditional SA.
 - sa.py
@@ -84,9 +82,9 @@ Here is the options.
 
 --T_min: Minimum temperature (last temperature)
 
-### Batch Processing
+## Batch Processing
 
-#### SSA
+### SSA
 
 To run the SSA algorithm on multiple graphs in a batch, use the batch_sa.sh script. For example:
 
@@ -95,12 +93,12 @@ To run the SSA algorithm on multiple graphs in a batch, use the batch_sa.sh scri
 ```
 Before running, please modify line 17 to specify your Python path.
 
-#### SSAI
+### SSAI
 
 Here is a python program for SSAI.
 - batch_ssai.sh
 
-#### SA
+### SA
 
 Also, here is a python program for traditional SA.
 - batch_sa.sh
