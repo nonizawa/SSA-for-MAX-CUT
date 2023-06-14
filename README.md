@@ -90,7 +90,7 @@ Before running, please modify line 17 to specify your Python path.
 
 ### SSAU
 
-Here is a python program for SSAI.
+Here is a python program for SSAU.
 - batch_ssau.sh
 
 ### SA
