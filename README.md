@@ -2,7 +2,7 @@
 
 [![GitHub license](https://img.shields.io/github/license/nonizawa/SSA-for-MAX-CUT)](https://github.com/nonizawa/SSA-for-MAX-CUT/blob/main/LICENSE)
 
-SSA-for-MAX-CUT is an implementation of the Simulated Simultaneous Annealing algorithm for solving the MAX-CUT problem. The MAX-CUT problem is a well-known problem in combinatorial optimization. This repository contains an implementation of the Stochastic Simulated Annealing (SSA) algorithm to tackle the MAX-CUT problem as described in the research paper ["Fast-Converging Simulated Annealing for Ising Models Based on Integral Stochastic Computing"](https://ieeexplore.ieee.org/document/9743572).　In addition, it contains an extented algorithm SSAI (SSA with individual noise) with the hyperparameter determintion in the research paper ["Local Energy Distribution Based Hyperparameter Determination for Stochastic Simulated Annealing"](https://arxiv.org/abs/2304.11839).
+SSA-for-MAX-CUT is an implementation of the Simulated Simultaneous Annealing algorithm for solving the MAX-CUT problem. The MAX-CUT problem is a well-known problem in combinatorial optimization. This repository contains an implementation of the Stochastic Simulated Annealing (SSA) algorithm to tackle the MAX-CUT problem as described in the research paper ["Fast-Converging Simulated Annealing for Ising Models Based on Integral Stochastic Computing"](https://ieeexplore.ieee.org/document/9743572).　In addition, it contains an extented algorithm SSAU (SSA with unique noise magnitude) with the hyperparameter determintion in the research paper ["Local Energy Distribution Based Hyperparameter Determination for Stochastic Simulated Annealing"](https://arxiv.org/abs/2304.11839).
 
 
 ## Table of Contents
@@ -52,10 +52,10 @@ Here ia the options.
 --param: There are eight parameters written in ssa.py
 
 
-### SSAI (Stochastic simulated annealing with individual noise)
+### SSAU (Stochastic simulated annealing with unique noise magnitude)
 
-Here is a python program for SSAI that can run, like SSA.
-- ssai.py
+Here is a python program for SSAU that can run, like SSA.
+- ssau.py
 
 It has the same options as well as SSA.
 
@@ -88,10 +88,10 @@ To run the SSA algorithm on multiple graphs in a batch, use the batch_sa.sh scri
 ```
 Before running, please modify line 17 to specify your Python path.
 
-### SSAI
+### SSAU
 
 Here is a python program for SSAI.
-- batch_ssai.sh
+- batch_ssau.sh
 
 ### SA
 
