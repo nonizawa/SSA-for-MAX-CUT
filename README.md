@@ -5,14 +5,6 @@
 SSA-for-MAX-CUT is an implementation of the Simulated Simultaneous Annealing algorithm for solving the MAX-CUT problem. The MAX-CUT problem is a well-known problem in combinatorial optimization. This repository contains an implementation of the Stochastic Simulated Annealing (SSA) algorithm to tackle the MAX-CUT problem as described in the research paper ["Fast-Converging Simulated Annealing for Ising Models Based on Integral Stochastic Computing"](https://ieeexplore.ieee.org/document/9743572).　In addition, it contains an extented algorithm SSAU (SSA with unique noise magnitude) with the hyperparameter determintion in the research paper ["Local Energy Distribution Based Hyperparameter Determination for Stochastic Simulated Annealing"](https://arxiv.org/abs/2304.11839).
 
 
-## Table of Contents
-1. [Installation](#installation)
-2. [Single run](#single)
-3. [Batch processing](#batch)
-4. [License](#license)
-5. [Citation](#citation)
-
-
 ## Installation
 
 ### Prerequisites
@@ -98,9 +90,20 @@ Here is a python program for SSAU.
 Also, here is a python program for traditional SA.
 - batch_sa.sh
 
-## License
+## Structure
 
-This project is licensed under the MIT License.
+- `./graph/`: This directory contains the dataset of graphs used for evaluation.
+- `./result/`: This directory contains the evaluation results.
+- `ssa.py`: This is the Python script that runs the SSA for MAX-CUT algorithm.
+- `ssau.py`: This is the Python script that runs the SSAU for MAX-CUT algorithm.
+- `sa.py`: This is the Python script that runs the SA for MAX-CUT algorithm.
+- `batch_ssa.sh`: This is the shell script that runs the SSA for batch processing.
+- `batch_ssau.sh`: This is the shell script that runs the SSAU for batch processing.
+- `batch_sa.sh`: This is the shell script that runs the SA for batch processing.
+
+## Contact
+
+For any questions, issues, or inquiries, feel free to create an issue in the repository or contact the repository owner [@nonizawa](https://github.com/nonizawa).
 
 ## Citation
 
@@ -139,3 +142,7 @@ Here is a bibtex for the code.
     howpublished = {\url{https://github.com/nonizawa/SSA-for-MAX-CUT}}
 }
 ```
+
+## License
+
+This project is licensed under the MIT License.
