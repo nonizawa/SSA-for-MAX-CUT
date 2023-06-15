@@ -134,13 +134,12 @@ Here is the following paper describing hyperparameters for SSA and SSAI:
 Here is a bibtex for the code.
 ```bibtex
 @misc{nonizawa_SSAforMAXCUT,
-    author = {Naoya Onizawa,
-    title = {SSA-for-MAX-CUT},
-    year = {2023},
-    publisher = {GitHub},
-    journal = {GitHub Repository},
-    howpublished = {\url{https://github.com/nonizawa/SSA-for-MAX-CUT}}
-}
+	author = {Onizawa, Naoya},
+	title = {{SSA-for-MAX-CUT}},
+	year = {2023},
+	journal = {GitHub Repository},
+	url = {https://github.com/nonizawa/SSA-for-MAX-CUT}
+	}
 ```
 
 ## License
