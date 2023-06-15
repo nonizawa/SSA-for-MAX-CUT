@@ -14,7 +14,7 @@ do
     
     # Run the simulated annealing algorithm script (sa.py) using python located at /xxx/yyy/
     # Pass in the defined constants as command line arguments along with the current file path
-    /xxx/yyy/python ssai.py --cycle $CYCLE  --trial $TRIAL --tau $TAU --param $PARAM_TYPE --file_path "$file"
+    /xxx/yyy/python ssau.py --cycle $CYCLE  --trial $TRIAL --tau $TAU --param $PARAM_TYPE --file_path "$file"
 done
 
 
