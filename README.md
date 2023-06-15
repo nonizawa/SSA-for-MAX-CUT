@@ -20,6 +20,18 @@ git clone https://github.com/nonizawa/SSA-for-MAX-CUT.git
 cd SSA-for-MAX-CUT
 ```
 
+## Structure
+
+- `./graph/`: This directory contains the dataset of graphs used for evaluation.
+- `./result/`: This directory contains the evaluation results generated using simulation.
+- `ssa.py`: This is the Python script that runs the SSA for MAX-CUT algorithm.
+- `ssau.py`: This is the Python script that runs the SSAU for MAX-CUT algorithm.
+- `sa.py`: This is the Python script that runs the SA for MAX-CUT algorithm.
+- `batch_ssa.sh`: This is the shell script that runs the SSA for batch processing.
+- `batch_ssau.sh`: This is the shell script that runs the SSAU for batch processing.
+- `batch_sa.sh`: This is the shell script that runs the SA for batch processing.
+
+
 ## Single Run
 
 ### SSA (Stochastic simulated annealing)
@@ -89,17 +101,6 @@ Here is a python program for SSAU.
 
 Also, here is a python program for traditional SA.
 - batch_sa.sh
-
-## Structure
-
-- `./graph/`: This directory contains the dataset of graphs used for evaluation.
-- `./result/`: This directory contains the evaluation results.
-- `ssa.py`: This is the Python script that runs the SSA for MAX-CUT algorithm.
-- `ssau.py`: This is the Python script that runs the SSAU for MAX-CUT algorithm.
-- `sa.py`: This is the Python script that runs the SA for MAX-CUT algorithm.
-- `batch_ssa.sh`: This is the shell script that runs the SSA for batch processing.
-- `batch_ssau.sh`: This is the shell script that runs the SSAU for batch processing.
-- `batch_sa.sh`: This is the shell script that runs the SA for batch processing.
 
 ## Contact
 
