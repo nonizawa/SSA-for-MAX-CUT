@@ -45,21 +45,21 @@ You can find the simulation results in ./result/.　Result***.csv includes simul
 
 Here ia the options.
 
---file_path: a graph file
+- `--file_path`: a graph file
 
---cycle: Number of cycles for 1 trial
+- `--cycle`: Number of cycles for 1 trial
 
---trial: Number of trials to evaluate the performance on average
+- `--trial`: Number of trials to evaluate the performance on average
 
---tau:  A pseudo inverse temperature is increased every tau cycle
+- `--tau`:  A pseudo inverse temperature is increased every tau cycle
 
---param: There are eight parameters written in ssa.py
+- `--param`: There are eight parameters written in ssa.py
 
 
 ### SSAU (Stochastic simulated annealing with unique noise magnitude)
 
 Here is a python program for SSAU that can run, like SSA.
-- ssau.py
+- `ssau.py`
 
 It has the same options as well as SSA.
 
@@ -67,19 +67,19 @@ It has the same options as well as SSA.
 ### SA (Traditional simulated annealing)
 
 Also, here is a python program for traditional SA.
-- sa.py
+- `sa.py`
 
 Here is the options.
 
 --file-path: a graph file
 
---cycle: Number of cycles for 1 trial
+- `--cycle`: Number of cycles for 1 trial
 
---trial: Number of trials to evaluate the performance on average
+- `--trial`: Number of trials to evaluate the performance on average
 
---T_ini  Initial temperature
+- `--T_ini`:  Initial temperature
 
---T_min: Minimum temperature (last temperature)
+- `--T_min`: Minimum temperature (last temperature)
 
 ## Batch Processing
 
@@ -95,12 +95,12 @@ Before running, please modify line 17 to specify your Python path.
 ### SSAU
 
 Here is a python program for SSAU.
-- batch_ssau.sh
+- `batch_ssau.sh`
 
 ### SA
 
 Also, here is a python program for traditional SA.
-- batch_sa.sh
+- `batch_sa.sh`
 
 ## Contact
 
