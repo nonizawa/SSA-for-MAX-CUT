@@ -22,11 +22,13 @@ cd SSA-for-MAX-CUT
 
 ## Structure
 
-- `./graph/`: This directory contains the dataset of graphs used for evaluation.
-- `./result/`: This directory contains the evaluation results generated using simulation.
+
 - `ssa.py`: This is the Python script that runs the SSA for MAX-CUT algorithm.
 - `ssau.py`: This is the Python script that runs the SSAU for MAX-CUT algorithm.
 - `sa.py`: This is the Python script that runs the SA for MAX-CUT algorithm.
+- `utils.py`: This is the Python script that includes function for SSA and SSAU.
+- `./graph/`: This directory contains the dataset of graphs used for evaluation.
+- `./result/`: This directory contains the evaluation results generated using simulation.
 - `batch_ssa.sh`: This is the shell script that runs the SSA for batch processing.
 - `batch_ssau.sh`: This is the shell script that runs the SSAU for batch processing.
 - `batch_sa.sh`: This is the shell script that runs the SA for batch processing.
