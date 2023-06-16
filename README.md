@@ -11,6 +11,12 @@ SSA-for-MAX-CUT is an implementation of the Simulated Simultaneous Annealing alg
 
 - Python 3.x
 
+### Install the required packages
+
+```sh
+pip install requirement.txt
+```
+
 ### Clone the Repository
 
 To get started, clone the repository using git:
