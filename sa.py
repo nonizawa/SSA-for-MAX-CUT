@@ -141,7 +141,7 @@ print('mean_time = ', np.mean(time_list))
 print("Total time:", time.time()-starttime)
 
 if os.path.isfile("./result/result_sa.csv"): # "result.csv" ファイルが存在する場合
-    with open("result.csv", 'a', newline='') as csvfile:
+    with open("./result/result_sa.csv", 'a', newline='') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow([file_name,T_ini,T_min,cycle,trial,best_known,np.mean(cut_value_list), np.min(cut_value_list), np.max(cut_value_list), np.mean(time_list)])
 else: # "result_sa.csv" 
