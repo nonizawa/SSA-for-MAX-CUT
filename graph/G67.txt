@@ -1,6 +1,6 @@
 10000
 bipolar
-toroidal
+troidal
 6950
 1 9901 -1
 1 101 1

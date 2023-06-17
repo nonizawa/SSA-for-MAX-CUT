@@ -1,6 +1,6 @@
 14000
 bipolar
-unknown
+troidal
 9938
 1 13901 -1
 1 101 -1
