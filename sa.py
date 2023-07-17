@@ -5,6 +5,7 @@ import math
 import csv
 import pandas as pd
 import argparse
+import statistics
 
 starttime = time.time()
 
@@ -133,23 +134,28 @@ for tri in range(trial):
     print('Cut value =', cut_value)
     print('Last energy = ', last_energy)
 
+
+std_cut = statistics.stdev(cut_value_list)
 print('min_cut_value =',np.min(cut_value_list))
 print('mean_cut_value = ',np.mean(cut_value_list))
 print('max_cut_value = ',np.max(cut_value_list))
 print('mean_time = ', np.mean(time_list))
+print('Std of cut value :', std_cut)
 
 print("Total time:", time.time()-starttime)
+csv_file_name1 = './result/result_sa_cycle{}_trial{}.csv'.format(args.cycle, args.trial)
+csv_file_name2 = './result/cut_sa_cycle{}_trial{}.csv'.format(args.cycle, args.trial)
 
-if os.path.isfile("./result/result_sa.csv"): # "result.csv" ファイルが存在する場合
-    with open("./result/result_sa.csv", 'a', newline='') as csvfile:
+if os.path.isfile(csv_file_name1): # "result.csv" ファイルが存在する場合
+    with open(csv_file_name1, 'a', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow([file_name,T_ini,T_min,cycle,trial,best_known,np.mean(cut_value_list), np.max(cut_value_list), np.min(cut_value_list), np.mean(time_list)])
+        writer.writerow([file_name,T_ini,T_min,cycle,trial,best_known,np.mean(cut_value_list), np.max(cut_value_list), np.min(cut_value_list), std_cut, np.mean(time_list)])
 else: # "result_sa.csv" 
-    with open("./result/result_sa.csv", 'w', newline='') as csvfile:
+    with open(csv_file_name1, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow(['Gset','T_ini','T_min','cycle','trial','best-known value','mean_cut_value', 'max_cut_value', 'min_cut_value', 'mean_time'])
-        writer.writerow([file_name,T_ini,T_min,cycle,trial,best_known,np.mean(cut_value_list), np.max(cut_value_list), np.min(cut_value_list), np.mean(time_list)])
+        writer.writerow(['Gset','T_ini','T_min','cycle','trial','best-known value','mean_cut_value', 'max_cut_value', 'min_cut_value', 'std_cut_value', 'mean_time'])
+        writer.writerow([file_name,T_ini,T_min,cycle,trial,best_known,np.mean(cut_value_list), np.max(cut_value_list), np.min(cut_value_list), std_cut, np.mean(time_list)])
 
-with open('./result/cut_value_sa.csv', 'a', newline='') as f:
+with open(csv_file_name2, 'a', newline='') as f:
     writer = csv.writer(f)
     writer.writerow(cut_value_list)

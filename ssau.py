@@ -6,6 +6,7 @@ import csv
 import sys
 import os
 import utils as ut
+import statistics
 
 # Set verbose to True to print detailed log information
 verbose = True
@@ -47,6 +48,9 @@ param = args.param
 if param == 1:
     I0_min = np.float32(np.max(sigma_vector) * 0.01 + np.min(np.abs(mean_each)))
     I0_max = np.float32(np.max(sigma_vector) * 2 + np.min(np.abs(mean_each)))
+elif param == 2:
+    I0_min = np.float32(np.mean(sigma_vector) * 0.01 + np.mean(np.abs(mean_each)))
+    I0_max = np.float32(np.mean(sigma_vector) * 2 + np.mean(np.abs(mean_each)))
 
 tau = np.int32(args.tau)
 beta = np.float32((I0_min / I0_max) ** (tau / (min_cycle - 1)))
@@ -87,21 +91,23 @@ cut_average = cut_sum / trial
 cut_max = max(cut_list)
 cut_min = min(cut_list)
 time_average = time_sum / trial
+std_cut = statistics.stdev(cut_list)
 print('Cut value average :', cut_average)
 print('Cut value max :', cut_max)
 print('Cut value min :', cut_min)
 print('Time average :', time_average)
+print('Std of cut value :', std_cut)
 
 # Output total execution time
 print("Total time:", time.time() - starttime)
 
 # Define data to be written to csv
 data = [
-    name[0], name[1], name[2], name[3], name[4], cut_average, cut_max, cut_min, I0_min, I0_max, 100*cut_average/best_known, 100*cut_max/best_known, time_average]
+    name[0], name[1], name[2], name[3], name[4], cut_average, cut_max, cut_min, std_cut, 0.67448975*np.mean(sigma_vector), I0_min, I0_max, 100*cut_average/best_known, 100*cut_max/best_known, time_average]
 
 # Create file names for the output
-csv_file_name1 = './result/result_cpu_vector_cycle{}_trial{}_tau{}_param{}.csv'.format(args.cycle, args.trial, args.tau, args.param)
-csv_file_name2 = './result/cut_cpu_vector_cycle{}_trial{}_tau{}_param{}.csv'.format(args.cycle, args.trial, args.tau, args.param)
+csv_file_name1 = './result/result_ssau_vector_cycle{}_trial{}_tau{}_param{}.csv'.format(args.cycle, args.trial, args.tau, args.param)
+csv_file_name2 = './result/cut_ssau_vector_cycle{}_trial{}_tau{}_param{}.csv'.format(args.cycle, args.trial, args.tau, args.param)
 
 # Write data to csv files
 if os.path.isfile(csv_file_name1):
@@ -111,7 +117,7 @@ if os.path.isfile(csv_file_name1):
 else:
     with open(csv_file_name1, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow(['Gset', 'number of edges','edge value', 'edge type', 'best-known value', 'mean_cut_value', 'man_cut_value', 'min_cut_value', 'I0_min', 'I0_max', 'ratio of mean/best', 'ratio of max/best', 'mean_time'])
+        writer.writerow(['Gset', 'number of edges', 'edge value', 'edge type', 'best-known value', 'mean_cut_value', 'man_cut_value', 'min_cut_value', 'std_cut_value', 'n_rnd', 'I0_min', 'I0_max', 'ratio of mean/best', 'ratio of max/best', 'mean_time'])
         writer.writerow(data)
 
 # Write the cut list to a csv file
