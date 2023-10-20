@@ -21,7 +21,8 @@ mean_each = []
 std_each = []
 for j in range(vertex):
     mean_each.append((vertex-1)*np.mean(J_matrix[j]))
-    std_each.append(np.sqrt((vertex-1)*np.var(J_matrix[j])))
+    #std_each.append(np.sqrt((vertex-1)*np.var(J_matrix[j])))
+    std_each.append(np.sqrt((vertex-1)*np.var(np.concatenate([J_matrix[j],-J_matrix[j]]))))
 sigma = np.mean(std_each)
 mean = np.mean(mean_each)
 
@@ -43,12 +44,9 @@ if param == 1:
     I0_min = np.float32(sigma * 0.01 + abs(mean))
     I0_max = np.float32(sigma * 2 + np.abs(mean))
 elif param == 2:
-    I0_min = np.float32(sigma * 0 + abs(mean))
-    I0_max = np.float32(sigma * 2 + np.abs(mean))
-elif param == 3:
-    I0_min = np.float32(sigma * 0.1 + abs(mean))
-    I0_max = np.float32(sigma * 2 + np.abs(mean))
-
+    I0_min = np.float32(np.max(std_each)*0.01+np.min(np.abs(mean_each)))
+    I0_max = np.float32(np.max(std_each)*2+np.min(np.abs(mean_each)))
+    
 # More parameters
 tau = np.int32(args.tau)
 beta = np.float32((I0_min / I0_max) ** (tau / (min_cycle - 1)))

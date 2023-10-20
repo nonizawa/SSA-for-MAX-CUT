@@ -22,7 +22,8 @@ mean_each = []
 std_each = []
 for j in range(vertex):
     mean_each.append((vertex - 1) * np.mean(J_matrix[j]))
-    std_each.append(np.sqrt((vertex - 1) * np.var(J_matrix[j])))
+    #std_each.append(np.sqrt((vertex - 1) * np.var(J_matrix[j])))
+    std_each.append(np.sqrt((vertex-1)*np.var(np.concatenate([J_matrix[j],-J_matrix[j]]))))
 
 # Reshape sigma vector
 sigma_vector = np.array(std_each, dtype=np.float32)
